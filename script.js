@@ -3,12 +3,14 @@ const messageInput = document.getElementById('message-input');
 const result = document.getElementById('result');
 const checkMessageButton = document.getElementById('check-message-btn');
 
-const helpRegex = /please help/i;
+const helpRegex = /please help|assist me/i;
+
+const denyList = [helpRegex];
 //End of variables
 
 //functions
 
-const isSpam = (msg) => helpRegex.test(msg);
+const isSpam = (msg) => denyList.some((regex) => regex.test(msg));
 
 //End of functions
 
