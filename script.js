@@ -8,7 +8,7 @@ const helpRegex = /please help/i;
 
 //functions
 
-const isSpam = (msg) => msg.match(helpRegex);
+const isSpam = (msg) => helpRegex.test(msg);
 
 //End of functions
 
