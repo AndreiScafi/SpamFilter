@@ -4,8 +4,9 @@ const result = document.getElementById('result');
 const checkMessageButton = document.getElementById('check-message-btn');
 
 const helpRegex = /please help|assist me/i;
+const dollarRegex = /[0-9]+ (?:hundred|thousand|million|billion)? dollars/i;
 
-const denyList = [helpRegex];
+const denyList = [helpRegex, dollarRegex];
 //End of variables
 
 //functions
