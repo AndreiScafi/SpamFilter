@@ -11,13 +11,11 @@ const dearRegex = /(?:\s|^)d[e3][a@4]r fr[i1|][e3]nd(?:\s|$)/i;
 
 const denyList = [helpRegex, dollarRegex, freeRegex, dearRegex];
 //End of variables
-
 //functions
 
 const isSpam = (msg) => denyList.some((regex) => regex.test(msg));
 
 //End of functions
-
 //Eventlistener
 checkMessageButton.addEventListener('click', () => {
     if (messageInput.value === "") {
